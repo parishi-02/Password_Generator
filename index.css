@@ -1,0 +1,765 @@
+body {
+    margin: 0;
+    overflow-x: auto;
+    overflow-y: auto;
+    background-color: black;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* CSS of upper part */
+a {
+    text-decoration: none;
+    color: black;
+}
+
+.upper-container {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+
+.upper-inner-container {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    color: white;
+    place-items: center;
+    place-content: center;
+}
+
+#heading-upper {
+    font-size: 45px;
+    text-align: center;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    text-shadow: 4px 2px 3px #972020;
+
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+#description {
+    font-size: 15px;
+    text-align: center;
+    margin-top: 0px;
+    margin-bottom: 42px;
+}
+
+#try-button {
+    border-radius: 25px;
+    font-size: 25px;
+    width: 50%;
+    height: 48px;
+    background-color: #972020;
+    border: 1px solid;
+    transition: transform .2s;
+}
+
+#try-button:hover {
+    color: white;
+    transform: scale(1.1);
+    box-shadow: 2px 2px 6px white;
+}
+
+
+/* CSS of password generator portion */
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+    place-items: center;
+}
+
+#lower-inner-container {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+    opacity: 0.75;
+    letter-spacing: 2px;
+    text-align: center;
+    line-height: 1.2;
+}
+
+.display-container {
+    position: relative;
+    background-color: white;
+    border-radius: 3rem;
+    padding-top: 0.35rem;
+    width: 400px;
+}
+
+.display {
+    background-color: transparent;
+    padding: 1rem 1rem 1.3rem 1rem;
+    font-weight: 600;
+    font-size: 1.5rem;
+    letter-spacing: 1px;
+    padding-right: 3.25rem;
+    border: none;
+    height: 4px;
+    cursor: inherit;
+}
+
+.display:focus {
+    outline: none;
+}
+
+.display::placeholder {
+    position: absolute;
+    top: 50%;
+    left: 1.5rem;
+    font-size: 1.5rem;
+    line-height: 30px;
+    color: red;
+    opacity: 0.65;
+    text-transform: uppercase;
+    transform: translateY(-50%);
+}
+
+
+
+.display-container button {
+    position: absolute;
+    top: 50%;
+    right: 1.5rem;
+    transform: translateY(-50%);
+    color: black;
+    cursor: pointer;
+}
+
+
+
+.input-container {
+    width: 450px;
+    background-color: #88323291;
+    border-radius: 1rem;
+    padding: 0.5rem 2rem;
+    border-bottom: 0.35rem solid #592020;
+}
+
+
+.length-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+}
+
+fieldset {
+    border: 2px solid white;
+    font-size: 20px;
+    border-radius: 6px;
+}
+
+.length-container p:nth-child(1) {
+    color: white;
+    font-size: 1.5rem;
+}
+
+
+.length-container p:nth-child(2) {
+    color: yellow;
+    font-size: 1.5rem;
+}
+
+.strength-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 10rem;
+}
+
+
+.strength-container p {
+    font-size: 1.5rem;
+
+}
+
+.indicator {
+    width: 1.5rem;
+    height: 1.5rem;
+    border-radius: 50%;
+}
+
+.copyBtn {
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+
+.copyBtn img {
+    cursor: pointer;
+
+}
+
+.tooltip {
+    position: absolute;
+    background-color: #cc5454;
+    color: #0a0a09;
+    font-size: 1rem;
+    top: -35px;
+    left: -19px;
+    padding: 5px 10px;
+    border-radius: 1rem;
+    opacity: 0;
+    transform: scale(0);
+    transform-origin: bottom;
+    transition: all 250ms ease-in-out;
+}
+
+
+.tooltip.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.generatebutton {
+    width: 400px;
+    height: 48px;
+    border-radius: 25px;
+    font-size: 25px;
+    background-color: #1f1a1a;
+    color: white;
+    border: 1px solid;
+    transition: transform .2s;
+    text-align: center;
+    font-weight: 600;
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    margin: 1.3rem 3.5rem;
+}
+
+.generatebutton:hover {
+    color: white;
+    transform: scale(1);
+    box-shadow: 2px 2px 6px white;
+}
+
+.check {
+    display: flex;
+    align-items: center;
+    gap: 0rem 0.5rem;
+    margin: 0.5rem 0rem;
+}
+
+.check input {
+    appearance: none;
+    border: 1px solid black;
+    background-color: beige;
+    cursor: pointer;
+    position: relative;
+    border-radius: 0.35rem;
+    width: 20px;
+    height: 20px;
+}
+
+.check input:checked {
+    background-color: black;
+}
+
+.check input:checked::before {
+    content: '✔';
+    position: absolute;
+    color: red;
+    font-size: 1.05rem;
+    font-weight: 600;
+    left: 50%;
+    top: -3.5px;
+    transform: translateX(-45%) translateY(3%);
+}
+
+
+.check label {
+    color: white;
+    font-size: 1.25rem;
+    letter-spacing: 0.75px;
+}
+
+.slider {
+    appearance: none;
+    cursor: pointer;
+    width: 100%;
+    height: 0.75rem;
+    background-color: rgb(7, 7, 7);
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 36px;
+    background-image: linear-gradient(rgb(171, 107, 107), rgb(203, 73, 73));
+    background-repeat: no-repeat;
+    border: none;
+    outline: none;
+    z-index: -1;
+}
+
+.slider::-webkit-slider-thumb {
+    position: relative;
+    z-index: 1;
+    appearance: none;
+    height: 2rem;
+    width: 2rem;
+    border-radius: 50%;
+    background-color: red;
+    cursor: pointer;
+    margin-top: -3px;
+    box-shadow: 1px 1px 20px 0px rgb(233, 233, 96);
+    transition: all 100ms ease-in;
+
+}
+
+.slider:focus {
+    outline: 3px solid rgb(202, 38, 38);
+}
+
+.slider::-webkit-slider-thumb:hover {
+    outline: 2px solid black;
+    background-color: black;
+    box-shadow: 1px 1px 15px 5px rgba(255, 229, 61, 0.80);
+}
+
+
+
+@media (min-width:877px) and (max-width: 999px) {
+    .upper-inner-container {
+        .display {
+            width: 360px;
+            font-size: 1.8rem;
+        }
+
+        width: 65%;
+    }
+
+}
+
+@media (min-width:783px) and (max-width: 876px) {
+    .display {
+        width: 350px;
+        font-size: 1.7rem;
+    }
+
+    .upper-inner-container {
+        width: 75%;
+    }
+}
+
+@media (min-width:685px) and (max-width: 782px) {
+    .display {
+        width: 340px;
+        font-size: 1.65rem;
+    }
+
+    .upper-inner-container {
+        width: 75%;
+    }
+
+    .input-container {
+        width: 380px;
+    }
+}
+
+@media (min-width:580px) and (max-width: 684px) {
+    .display {
+        width: 320px;
+        font-size: 1.55rem;
+    }
+
+    .upper-inner-container {
+        width: 85%;
+    }
+
+    .input-container {
+        width: 343px;
+    }
+}
+
+
+@media (min-width:510px) and (max-width: 580px) {
+    .display {
+        width: 300px;
+        font-size: 1.5rem;
+    }
+
+    .upper-inner-container {
+        width: 85%;
+    }
+
+    #heading-upper {
+        font-size: 42px;
+    }
+
+    #description {
+        font-size: 13px;
+    }
+
+    .input-container {
+        width: 300px;
+    }
+
+    .check label {
+        font-size: 1rem;
+    }
+
+}
+
+
+@media (min-width:469px) and (max-width: 510px) {
+    .display {
+        width: 250px;
+        font-size: 1.2rem;
+    }
+
+    .upper-inner-container {
+        width: 75%;
+    }
+
+    #heading-upper {
+        font-size: 40px;
+    }
+
+    #description {
+        font-size: 13px;
+    }
+
+    .input-container {
+        width: 280px;
+    }
+
+    .check label {
+        font-size: 1rem;
+    }
+
+
+}
+
+@media (min-width:380px) and (max-width: 510px) {
+    .upper-inner-container {
+        width: 94%;
+    }
+
+    #heading-upper {
+        font-size: 40px;
+    }
+
+    #description {
+        font-size: 13px;
+    }
+}
+
+@media(min-width:445px) and (max-width: 469px) {
+    .display {
+        width: 220px;
+        font-size: 1.1rem;
+    }
+
+    .input-container {
+        width: 260px;
+    }
+
+    .check label {
+        font-size: 1rem;
+    }
+}
+
+@media(min-width:415px) and (max-width: 444px) {
+    .display {
+        width: 200px;
+        font-size: 1rem;
+    }
+
+    .input-container {
+        width: 260px;
+    }
+
+    .check label {
+        font-size: 0.98rem;
+    }
+
+    .display-container {
+        width: 330px;
+    }
+
+    .generatebutton {
+        width: 330px;
+    }
+
+    .length-container p:nth-child(1) {
+        font-size: 1.3rem;
+    }
+
+    .length-container p:nth-child(2) {
+        font-size: 1.3rem;
+    }
+
+    .display::placeholder {
+        font-size: 1.4rem;
+    }
+
+}
+
+@media(min-width:380px) and (max-width: 414px) {
+    .display {
+        width: 190px;
+        font-size: 0.95rem;
+    }
+
+    .input-container {
+        width: 240px;
+    }
+
+    .check input {
+        width: 17px;
+        height: 17px;
+    }
+
+    .check label {
+        font-size: 0.8rem;
+    }
+
+    .check input:checked::before {
+        font-size: 1rem;
+    }
+
+    .display-container {
+        width: 330px;
+    }
+
+    .generatebutton {
+        width: 330px;
+        font-size: 1.2rem;
+    }
+
+    .length-container p:nth-child(1) {
+        font-size: 1.2rem;
+    }
+
+    .length-container p:nth-child(2) {
+        font-size: 1.2rem;
+    }
+
+    .display::placeholder {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 450px) {
+    #extra-description {
+        display: none;
+    }
+
+    #unique-password {
+        display: none;
+    }
+}
+
+@media (min-width:280px) and (max-width: 380px) {
+    .display {
+        width: 180px;
+        font-size: 0.85rem;
+    }
+
+    .upper-inner-container {
+        width: 88%;
+        grid-template-rows: 84px 143px 107px 46px;
+    }
+
+    #heading-upper {
+        font-size: 36px;
+    }
+
+    #description {
+        font-size: 10.5px;
+    }
+
+    #extra-description {
+        display: none;
+    }
+
+    #try-button {
+        width: 64%;
+        height: 40px;
+    }
+
+}
+
+@media (min-width:328px) and (max-width: 380px) {
+
+    .display {
+        width: 150px;
+        font-size: 0.7rem;
+    }
+
+    .length-container p:nth-child(1) {
+        font-size: 1rem;
+    }
+
+    .length-container p:nth-child(2) {
+        font-size: 1rem;
+    }
+
+    .input-container {
+        width: 220px;
+    }
+
+    .check input {
+        width: 17px;
+        height: 17px;
+    }
+
+    .check label {
+        font-size: 0.7rem;
+    }
+
+    .check input:checked::before {
+        font-size: 1rem;
+    }
+
+    .display-container {
+        width: 300px;
+    }
+
+    .generatebutton {
+        width: 300px;
+        font-size: 1rem;
+    }
+
+    .display::placeholder {
+        font-size: 1.2rem;
+    }
+}
+
+
+@media (min-width:280px) and (max-width: 328px) {
+    .display {
+        width: 140px;
+        font-size: 0.6rem;
+    }
+
+    .length-container p:nth-child(1) {
+        font-size: 0.9rem;
+    }
+
+    .length-container p:nth-child(2) {
+        font-size: 0.9rem;
+    }
+
+    .input-container {
+        width: 200px;
+    }
+
+    .strength-container {
+        gap: 8rem;
+    }
+
+    .check input {
+        width: 15px;
+        height: 15px;
+    }
+
+    .check label {
+        font-size: 0.6rem;
+    }
+
+    .check input:checked::before {
+        font-size: 0.9rem;
+    }
+
+    .display-container {
+        width: 250px;
+    }
+
+    .generatebutton {
+        width: 250px;
+        font-size: 0.9rem;
+    }
+
+    .display::placeholder {
+        font-size: 1rem;
+    }
+}
+
+
+@media(min-width:241px) and (max-width: 279.5px) {
+    .display {
+        width: 1350px;
+        font-size: 0.5rem;
+    }
+
+    .upper-inner-container {
+        width: 88%;
+        grid-template-rows: 84px 143px 107px 46px;
+    }
+
+    #heading-main {
+        font-size: 13px;
+    }
+
+    #heading-upper {
+        font-size: 36px;
+    }
+
+    #description {
+        font-size: 10.5px;
+    }
+
+    #try-button {
+        width: 64%;
+        height: 40px;
+    }
+
+    .length-container p:nth-child(1) {
+        font-size: 0.9rem;
+    }
+
+    .length-container p:nth-child(2) {
+        font-size: 0.9rem;
+    }
+
+    .strength-container {
+        gap: 6rem;
+    }
+
+    .input-container {
+        width: 150px;
+    }
+
+    .check {
+        gap: 0rem 0rem;
+    }
+
+    .check input {
+        width: 12px;
+        height: 12px;
+    }
+
+    .check label {
+        font-size: 0.4rem;
+    }
+
+    .check input:checked::before {
+        font-size: 0.5rem;
+    }
+
+    .display-container {
+        width: 200px;
+    }
+
+    .generatebutton {
+        width: 200px;
+        font-size: 0.7rem;
+    }
+
+    .display::placeholder {
+        font-size: 1rem;
+    }
+}
