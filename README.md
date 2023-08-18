@@ -1,7 +1,7 @@
 
 # Password Generator
 
-## Description
+### 1. Description
 * This is a simple tool that helps you generate strong and secure passwords. 
 * Strong passwords is crucial to protect your online accounts and sensitive information from unauthorized access.
 * This project provides an easy-to-use interface for generating passwords with various options and customizable settings.
@@ -26,9 +26,30 @@
 
  
 
-## 🔗 How to Get There
+## How to Get There
  **Click the link below and use this tool.**
 
-  https://pswdgenr.netlify.app/
+   https://pswdgenr.netlify.app/
 
 
+## Demo link
+**Use the link below to know the working of this tool.** 
+
+   https://drive.google.com/file/d/1KSAvdioAX5SIdq2cBVXwjiAihkQ862sL/view?usp=sharing
+
+   
+
+
+
+
+## References
+
+[W3Schools](https://www.w3schools.com/)
+
+[Mozilla Developer](https://developer.mozilla.org/en-US/)
+
+[Youtube](https://www.youtube.com/)
+
+## Support
+
+For support and suggestions, feel free to contact  [parishijainiit@gmail.com](mailto:parishijainiit@gmail.com).
