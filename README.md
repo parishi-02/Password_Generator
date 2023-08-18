@@ -1,7 +1,7 @@
 
 # Password Generator
 
-### 1. Description
+### Description
 * This is a simple tool that helps you generate strong and secure passwords. 
 * Strong passwords is crucial to protect your online accounts and sensitive information from unauthorized access.
 * This project provides an easy-to-use interface for generating passwords with various options and customizable settings.
